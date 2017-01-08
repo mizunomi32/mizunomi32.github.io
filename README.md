@@ -1,2 +1,2 @@
 mizunomi32.github.io
-<mizunomi32.github.io>
+<https://mizunomi32.github.io>
