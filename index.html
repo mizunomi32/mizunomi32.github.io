@@ -4,59 +4,97 @@
 <html lang="ja">
 <meta charset="utf-8">
 <title>mizunomi32</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(function() {
+  var h = $(window).height();
+
+  $('#wrap').css('display','none');
+  $('#loader-bg ,#loader').height(h).css('display','block');
+});
+
+$(window).load(function () { //全ての読み込みが完了したら実行
+  $('#loader-bg').delay(900).fadeOut(800);
+  $('#loader').delay(600).fadeOut(300);
+  $('#wrap').css('display', 'block');
+});
+
+//10秒たったら強制的にロード画面を非表示
+$(function(){
+  setTimeout('stopload()',10000);
+});
+
+function stopload(){
+  $('#wrap').css('display','block');
+  $('#loader-bg').delay(900).fadeOut(800);
+  $('#loader').delay(600).fadeOut(300);
+}
+</script>
 
 </head>
 <body>
-<header id="head"><h1>mizunomi32</h1></header>
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#product">Product</a></li>
-<li><a href="#contest">Contest</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-<div id="about">
-<h2>About</h2>
-<ul>
-<li>Name</li>
-mizunomi32
-<li>Age</li>
-20
-<li>Job</li>
-student
-<li>Language</li>
-Japanese English HTML CSS PHP JavaScript C C++ C# Java Ruby Python Perl Lisp Go Haskell
-<li>Skill</li>
-Unity Opencv Blender Ardiuno Android...etc
-<li>Like</li>
-Arch linux  Emacs Python i3-wm zsh ...etc
-</ul>
+  <div id="loader-bg">
+  <div id="loader">
+    <img src="img-loading.gif" width="80" height="80" alt="Now Loading..." />
+    <p>Now Loading...</p>
+  </div>
 </div>
-
-<div id="product">
-  <h2>Product</h2>
-  <ul>
-    <li>Android Apps</li>
-    <li>VR</li>
-    <ul><li><a href="http://ivrc.net/2016/visitors/#AjaxActionArea">THE MIRROR　～鏡に映るもう一人の自分～</a></li>
+<div id="wrap">
+  <header id="head"><h1>mizunomi32</h1></header>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#product">Product</a></li>
+      <li><a href="#contest">Contest</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-  </ul>
-</div>
-<div id="contest">
-  <h2>Contest</h2>
-  <ul><li>
-    IVRC2016(The 24th International collegiate Virtual Reality Contest) Youth division bronze
-  </li>
-  Teem: Merror<br>
-  Title: 	THE MIRROR　～鏡に映るもう一人の自分～<br>
-  <a href="http://ivrc.net/2016/">http://ivrc.net/2016/</a>
-</ul>
-</div>
 
-<div id="contact">
-  <h2>Contact</h2>
-  <ul><li><a href="https://github.com/mizunomi32">Github</a></li>
-    <li><a href="https://twitter.com/mizunomi32"> Twitter</a></li>
-  </ul>
-</div>
+    <div id="about">
+      <h2>About</h2>
+      <ul>
+        <li>Name</li>
+        mizunomi32
+        <li>Age</li>
+        20
+        <li>Job</li>
+        student
+        <li>Language</li>
+        Japanese English HTML CSS PHP JavaScript C C++ C# Java Ruby Python Perl Lisp Go Haskell
+        <li>Skill</li>
+        Unity Opencv Blender Ardiuno Android...etc
+        <li>Like</li>
+        Arch linux  Emacs Python i3-wm zsh ...etc
+      </ul>
+    </div>
+
+    <div id="product">
+      <h2>Product</h2>
+      <ul>
+        <li>Android Apps</li>
+        <li>VR</li>
+        <ul>
+          <li><a href="http://ivrc.net/2016/visitors/#AjaxActionArea">THE MIRROR　～鏡に映るもう一人の自分～</a></li>
+        </ul>
+      </ul>
+    </div>
+
+    <div id="contest">
+      <h2>Contest</h2>
+      <ul>
+        <li>IVRC2016(The 24th International collegiate Virtual Reality Contest) Youth division bronze</li>
+        Teem: Merror<br>
+        Title: 	THE MIRROR　～鏡に映るもう一人の自分～<br>
+        <a href="http://ivrc.net/2016/">http://ivrc.net/2016/</a>
+      </ul>
+    </div>
+
+    <div id="contact">
+      <h2>Contact</h2>
+      <ul>
+        <li><a href="https://github.com/mizunomi32">Github</a></li>
+        <li><a href="https://twitter.com/mizunomi32"> Twitter</a></li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
