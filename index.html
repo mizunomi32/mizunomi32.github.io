@@ -3,24 +3,17 @@
 <head>
 <html lang="ja">
 <meta charset="utf-8">
-
-<link rel="stylesheet" href="style.css" type="text/css">
-<script src="jquery-3.1.1.min.js"></script>
+<link rel="stylesheet" href="asset/css/style.css" type="text/css">
+<script src="asset/js/jquery-3.1.1.min.js"></script>
 <title>mizunomi32</title>
-
-
 <script>
 $(function() {
   var h = $(window).height();
   $('#wrap').css('display','none');
   $('#loader-bg ,#loader').height(h).css('display','block');
 });
-//$(window).load(function () { //全ての読み込みが完了したら実行
-  //$('#loader-bg').delay(900).fadeOut(800);
-  //$('#loader').delay(600).fadeOut(300);
-  //$('#wrap').css('display', 'block');
-//});
-//10秒たったら強制的にロード画面を非表示
+
+//3秒たったら強制的にロード画面を非表示
 $(function(){
   setTimeout('stopload()',3000);
 });
@@ -36,7 +29,7 @@ function stopload(){
 <body>
   <div id="loader-bg">
   <div id="loader">
-    <img src="img-loading.gif" width="80" height="80" alt="Now Loading..." />
+    <img src="asset/img/img-loading.gif" width="80" height="80" alt="Now Loading..." />
     <p>Now Loading...</p>
   </div>
 </div>
@@ -45,7 +38,7 @@ function stopload(){
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#product">Product</a></li>
-      <li><a href="#contest">Contest</a></li>
+      <li><a href="#activity">Activity log</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
 
@@ -78,13 +71,15 @@ function stopload(){
       </ul>
     </div>
 
-    <div id="contest">
-      <h2>Contest</h2>
+    <div id="activity">
+      <h2>Activity log</h2>
       <ul>
         <li>IVRC2016(The 24th International collegiate Virtual Reality Contest) Youth division bronze</li>
         Teem: Merror<br>
         Title: 	THE MIRROR　～鏡に映るもう一人の自分～<br>
         <a href="http://ivrc.net/2016/">http://ivrc.net/2016/</a>
+        <li>セキュリティキャンプ九州in福岡 2016 (チューター)</li>
+        <li>セキュリティキャンプ九州in福岡 2015</li>
       </ul>
     </div>
 
@@ -93,6 +88,7 @@ function stopload(){
       <ul>
         <li><a href="https://github.com/mizunomi32">Github</a></li>
         <li><a href="https://twitter.com/mizunomi32"> Twitter</a></li>
+        <li><a href="https://blog.miccchi.com">Blog</a></li>
       </ul>
     </div>
   </div>
