@@ -1,12 +1,20 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
+<!DOCTYPE html>
 <html lang="ja">
-<meta charset="utf-8">
-<link rel="stylesheet" href="asset/css/style.css" type="text/css">
-<script src="asset/js/jquery-3.1.1.min.js"></script>
-<title>mizunomi32</title>
-<script>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/loadiing.css" rel="stylesheet">
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+    <title>mizunomi32</title>
+    <script>
+<!--
+//疑似ローディング画面
 $(function() {
   var h = $(window).height();
   $('#wrap').css('display','none');
@@ -23,41 +31,66 @@ function stopload(){
   $('#loader-bg').delay(900).fadeOut(800);
   $('#loader').delay(600).fadeOut(300);
 }
-</script>
+-->
+  </script>
+  </head>
+  <body>
+    <div id="loader-bg">
+      <div id="loader">
+        <img src="img/img-loading.gif" width="80" height="80" alt="Now Loading..." />
+        <p>Now Loading...</p>
+      </div>
+    </div>
+    <div id="wrap">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" data-vivaldi-spatnav-clickable="1">menu</a>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#" data-vivaldi-spatnav-clickable="1">Top <span class="sr-only">(current)</span></a></li>
+              <li><a href="#about" data-vivaldi-spatnav-clickable="1">About</a></li>
+              <li><a href="#product" data-vivaldi-spatnav-clickable="1">Product</a></li>
+              <li><a href="#activity" data-vivaldi-spatnav-clickable="1">Activity log</a></li>
+              <li><a href="#contact" data-vivaldi-spatnav-clickable="1">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
-</head>
-<body>
-  <div id="loader-bg">
-  <div id="loader">
-    <img src="asset/img/img-loading.gif" width="80" height="80" alt="Now Loading..." />
-    <p>Now Loading...</p>
-  </div>
-</div>
-<div id="wrap">
-  <header id="head"><h1>mizunomi32</h1></header>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#product">Product</a></li>
-      <li><a href="#activity">Activity log</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+      <header id="head"><h1>mizunomi32</h1></header>
 
-    <div id="about">
-      <h2>About</h2>
-      <ul>
-        <li>Name</li>
-        mizunomi32
-        <li>Age</li>
-        20
-        <li>Job</li>
-        student
-        <li>Language</li>
-        Japanese English HTML CSS PHP JavaScript C C++ C# Java Ruby Python Perl Lisp Go Haskell
-        <li>Skill</li>
-        Unity Opencv Blender Ardiuno Android...etc
-        <li>Like</li>
-        Arch linux  Emacs Python i3-wm zsh ...etc
-      </ul>
+      <div id="about">
+        <h2>About</h2>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8">
+              <ul>
+                <li>Name</li>
+                mizunomi32
+                <li>Age</li>
+                20
+                <li>Job</li>
+                student
+                <li>Language</li>
+                Japanese English HTML CSS PHP JavaScript C C++ C# Java Ruby Python Perl Lisp Go Haskell
+                <li>Skill</li>
+                Unity Opencv Blender Ardiuno Android...etc
+                <li>Like</li>
+                Arch linux  Emacs Python i3-wm zsh ...etc
+              </ul>
+            </div>
+          <div class="col-sm-4">image is coming soon</div>
+        </div>
+      </div>
     </div>
 
     <div id="product">
@@ -66,7 +99,7 @@ function stopload(){
         <li>Android Apps</li>
         <li>VR</li>
         <ul>
-          <li><a href="http://ivrc.net/2016/visitors/#AjaxActionArea">THE MIRROR　～鏡に映るもう一人の自分～</a></li>
+            <li><a href="http://ivrc.net/2016/visitors/#AjaxActionArea">THE MIRROR　～鏡に映るもう一人の自分～</a></li>
         </ul>
       </ul>
     </div>
@@ -75,9 +108,9 @@ function stopload(){
       <h2>Activity log</h2>
       <ul>
         <li>IVRC2016(The 24th International collegiate Virtual Reality Contest) Youth division bronze</li>
-        Teem: Merror<br>
-        Title: 	THE MIRROR　～鏡に映るもう一人の自分～<br>
-        <a href="http://ivrc.net/2016/">http://ivrc.net/2016/</a>
+            Teem: Merror<br>
+            Title: 	THE MIRROR　～鏡に映るもう一人の自分～<br>
+            <a href="http://ivrc.net/2016/">http://ivrc.net/2016/</a>
         <li>セキュリティキャンプ九州in福岡 2016 (チューター)</li>
         <li>セキュリティキャンプ九州in福岡 2015</li>
       </ul>
@@ -91,6 +124,11 @@ function stopload(){
         <li><a href="https://blog.miccchi.com">Blog</a></li>
       </ul>
     </div>
+
+    <footer style="background-color:gray">Copyright (C) 2017 mizunomi</footer>
+
   </div>
+
+
 </body>
 </html>
