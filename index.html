@@ -1,141 +1,257 @@
 <!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/loadiing.css" rel="stylesheet">
-    <!-- BootstrapのCSS読み込み -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- jQuery読み込み -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- BootstrapのJS読み込み -->
-    <script src="js/bootstrap.min.js"></script>
-    <title>mizunomi32</title>
-    <script>
-<!--
-//疑似ローディング画面
-$(function() {
-  var h = $(window).height();
-  $('#wrap').css('display','none');
-  $('#loader-bg ,#loader').height(h).css('display','block');
-});
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-//3秒たったら強制的にロード画面を非表示
-$(function(){
-  setTimeout('stopload()',3000);
-});
+  <title>mizunomi32</title>
 
-function stopload(){
-  $('#wrap').css('display','block');
-  $('#loader-bg').delay(900).fadeOut(800);
-  $('#loader').delay(600).fadeOut(300);
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <style type="text/css">
+  body { padding-top: 80px; }
+  @media ( min-width: 768px ) {
+    #banner {
+      min-height: 300px;
+      border-bottom: none;
+    }
+    .bs-docs-section {
+      margin-top: 8em;
+    }
+    .bs-component {
+      position: relative;
+    }
+    .bs-component .modal {
+      position: relative;
+      top: auto;
+      right: auto;
+      left: auto;
+      bottom: auto;
+      z-index: 1;
+      display: block;
+    }
+    .bs-component .modal-dialog {
+      width: 90%;
+    }
+    .bs-component .popover {
+      position: relative;
+      display: inline-block;
+      width: 220px;
+      margin: 20px;
+    }
+    .nav-tabs {
+      margin-bottom: 15px;
+    }
+    .progress {
+      margin-bottom: 10px;
+    }
+  }
+  .cover-img {
+	height: 600px;
+	display: table;
+	width: 100%;
+	background-size: cover;
 }
--->
-  </script>
-  </head>
-  <body>
-    <div id="loader-bg">
-      <div id="loader">
-        <img src="img/img-loading.gif" width="80" height="80" alt="Now Loading..." />
-        <p>Now Loading...</p>
+
+/* ワイドスクリーン用のCSS */
+@media only screen and (min-width: 1500px) {
+	.cover-img {
+		height: 800px;
+	}
+}
+
+/* タブレット用のCSS */
+@media only screen and (min-width : 768px) and (max-width : 1200px) {
+	.cover-img {
+		height: 500px;
+	}
+}
+
+/* スマホ用のCSS */
+@media only screen and (max-width: 479px) {
+	.cover-img {
+		height: 300px;
+	}
+}
+
+.cover-text {
+	display: table-cell;
+	vertical-align: middle;
+  text-align: center;
+}
+
+
+#header {
+    width: 100%;
+    min-width: 960px;
+    height: 100px;
+    position: fixed;
+    left:0;
+    top:0;
+    z-index: 10;
+}
+#about {
+    padding-top: 100px;
+    margin-top:-100px;
+    padding-top:100px;
+}
+#product {
+    padding-top: 100px;
+    margin-top:-100px;
+    padding-top:100px;
+}
+#activity{
+  padding-top: 100px;
+  margin-top:-100px;
+  padding-top:100px;
+}
+#contact {
+  padding-top: 100px;
+  margin-top:-100px;
+  padding-top:100px;
+}
+  </style>
+
+  <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+
+<header id="header">
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="#" class="navbar-brand">mizunomi32</a>
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
       </div>
-    </div>
-    <div id="wrap">
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#" data-vivaldi-spatnav-clickable="1">menu</a>
-          </div>
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#" data-vivaldi-spatnav-clickable="1">Top <span class="sr-only">(current)</span></a></li>
-              <li><a href="#about" data-vivaldi-spatnav-clickable="1">About</a></li>
-              <li><a href="#product" data-vivaldi-spatnav-clickable="1">Product</a></li>
-              <li><a href="#activity" data-vivaldi-spatnav-clickable="1">Activity log</a></li>
-              <li><a href="#contact" data-vivaldi-spatnav-clickable="1">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <header id="head"><h1>mizunomi32</h1></header>
-
-      <div id="about">
-        <h2>About</h2>
-
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8">
-              <ul>
-                <li>Name</li>
-                mizunomi32
-                <li>Age</li>
-                20
-                <li>Job</li>
-                student
-                <li>Language</li>
-                Japanese English HTML CSS PHP JavaScript C C++ C# Java Ruby Python Perl Lisp Go Haskell
-                <li>Skill</li>
-                Unity Opencv Blender Ardiuno Android...etc
-                <li>Like</li>
-                Arch linux  Emacs Python i3-wm zsh ...etc
-              </ul>
-            </div>
-          <div class="col-sm-4">image is coming soon</div>
-        </div>
-      </div>
-    </div>
-
-    <div id="product">
-      <h2>Product</h2>
-      <ul>
-        <li>Android Apps</li>
-        <li>VR</li>
-        <ul>
-            <li><a href="http://ivrc.net/2016/visitors/#AjaxActionArea">THE MIRROR　～鏡に映るもう一人の自分～</a></li>
+      <div class="navbar-collapse collapse" id="navbar-main">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Top</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#product">Product</a></li>
+          <li><a href="#activity">Activity log</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-      </ul>
+      </div>
     </div>
-
-    <div id="activity">
-      <h2>Activity log</h2>
-      <ul>
-        <li>
-          IVRC2016(The 24th International collegiate Virtual Reality Contest) Youth division bronze
-            Teem: Merror<br>
-            Title: 	THE MIRROR　～鏡に映るもう一人の自分～<br>
-            <a href="http://ivrc.net/2016/">http://ivrc.net/2016/</a>
-        </li>
-        <li>
-          セキュリティキャンプ九州in福岡 2016 (チューター)<br>
-          <a href="http://www.security-camp.org/minicamp/kyushu2016.html">http://www.security-camp.org/minicamp/kyushu2016.html</a>
-        </li>
-        <li>
-          セキュリティキャンプ九州in福岡 2015 <br>
-          <a href="http://www.security-camp.org/minicamp/kyushu2015.html">http://www.security-camp.org/minicamp/kyushu2015.html</a>
-        </li>
-      </ul>
-    </div>
-
-    <div id="contact">
-      <h2>Contact</h2>
-      <ul>
-        <li><a href="https://github.com/mizunomi32">Github</a></li>
-        <li><a href="https://twitter.com/mizunomi32"> Twitter</a></li>
-        <li><a href="https://blog.miccchi.com">Blog</a></li>
-      </ul>
-    </div>
-
-    <footer style="background-color:gray">Copyright (C) 2017 mizunomi</footer>
-
   </div>
+</header>
+
+
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12 cover-img" style="background-image:url('image.jpg');">
+			<div class="cover-text text-center">
+				<h1><p style="color: #fff;">Mizunomi32</p></h1>
+        <p  style="color: #fff;" class="lead">Welcome my page!</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="bs-docs-section clearfix" >
+  <div class="row" id="about">
+    <div class="col-lg-12">
+      <div class="page-header">
+        <h1 >About</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4">image is coming soon</div>
+    <div class="col-sm-6">
+      <ul>
+        <li>Name</li>
+        mizunomi32
+        <li>Age</li>
+        20
+        <li>Job</li>
+        student
+        <li>Language</li>
+        Japanese English HTML CSS PHP JavaScript C C++ C# Java Ruby Python Perl Lisp Go Haskell
+        <li>Skill</li>
+        Unity Opencv Blender Ardiuno Android...etc
+        <li>Like</li>
+        Arch linux  Emacs Python i3-wm zsh ...etc
+      </ul>
+    </div>
+
+  <div class="col-sm-1"></div>
+</div>
+</div>
+
+
+<div class="bs-docs-section clearfix" >
+  <div class="row" id="product">
+    <div class="col-lg-12">
+      <div class="page-header">
+        <h1 >Product</h1>
+      </div>
+    </div>
+  </div>
+  <ul>
+    <li>Android Apps</li>
+    <li>VR</li>
+    <ul>
+        <li><a href="http://ivrc.net/2016/visitors/#AjaxActionArea">THE MIRROR　～鏡に映るもう一人の自分～</a></li>
+    </ul>
+  </ul>
+
+</div>
+<div class="bs-docs-section clearfix" >
+  <div class="row" id="activity">
+    <div class="col-lg-12">
+      <div class="page-header">
+        <h1 >Activity</h1>
+      </div>
+    </div>
+  </div>
+    <ul>
+      <li>
+        IVRC2016(The 24th International collegiate Virtual Reality Contest) Youth division bronze
+          Teem: Merror<br>
+          Title: 	THE MIRROR　～鏡に映るもう一人の自分～<br>
+          <a href="http://ivrc.net/2016/">http://ivrc.net/2016/</a>
+      </li>
+      <li>
+        セキュリティキャンプ九州in福岡 2016 (チューター)<br>
+        <a href="http://www.security-camp.org/minicamp/kyushu2016.html">http://www.security-camp.org/minicamp/kyushu2016.html</a>
+      </li>
+      <li>
+        セキュリティキャンプ九州in福岡 2015 <br>
+        <a href="http://www.security-camp.org/minicamp/kyushu2015.html">http://www.security-camp.org/minicamp/kyushu2015.html</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="bs-docs-section clearfix" >
+    <div class="row" id="contact">
+      <div class="col-lg-12">
+        <div class="page-header">
+          <h1 >Contact</h1>
+        </div>
+      </div>
+    </div>
+    <ul>
+      <li><a href="https://github.com/mizunomi32">Github</a></li>
+      <li><a href="https://twitter.com/mizunomi32"> Twitter</a></li>
+      <li><a href="https://blog.miccchi.com">Blog</a></li>
+    </ul>
+  </div>
+
+  <footer style="background-color:gray">Copyright (C) 2017 mizunomi</footer>
+
+</div>
 
 
 </body>
