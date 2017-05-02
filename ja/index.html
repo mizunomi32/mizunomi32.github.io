@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>mizunomi32</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+  <style type="text/css">
+  body { padding-top: 80px; }
+
+
+.cover-text {
+	display: table-cell;
+	vertical-align: middle;
+  text-align: center;
+}
+
+.mysection{
+  height: 100vh
+}
+
+
+#header {
+    width: 100%;
+    min-width: 960px;
+    height: 100px;
+    position: fixed;
+    left:0;
+    top:0;
+    z-index: 10;
+}
+#about {
+    padding-top: 100px;
+    margin-top:-100px;
+    padding-top:100px;
+}
+#product {
+    padding-top: 100px;
+    margin-top:-100px;
+    padding-top:100px;
+}
+#activity{
+  padding-top: 100px;
+  margin-top:-100px;
+  padding-top:100px;
+}
+#contact {
+  padding-top: 100px;
+  margin-top:-100px;
+  padding-top:100px;
+}
+@media ( min-width: 768px ) {
+  #banner {
+    min-height: 300px;
+    border-bottom: none;
+  }
+  .bs-docs-section {
+    margin-top: 8em;
+  }
+  .bs-component {
+    position: relative;
+  }
+  .bs-component .modal {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    z-index: 1;
+    display: block;
+  }
+  .bs-component .modal-dialog {
+    width: 90%;
+  }
+  .bs-component .popover {
+    position: relative;
+    display: inline-block;
+    width: 220px;
+    margin: 20px;
+  }
+  .nav-tabs {
+    margin-bottom: 15px;
+  }
+  .progress {
+    margin-bottom: 10px;
+  }
+}
+.cover-img {
+height: 100vh;
+display: table;
+width: 100%;
+background-size: cover;
+
+}
+
+/* ワイドスクリーン用のCSS */
+@media only screen and (min-width: 1500px) {
+.cover-img {
+  height: 100vh;
+}
+}
+
+/* タブレット用のCSS */
+@media only screen and (min-width : 768px) and (max-width : 1200px) {
+.cover-img {
+  height: 100vh;
+}
+}
+
+/* スマホ用のCSS */
+@media only screen and (max-width: 768px) {
+.cover-img {
+  height: 90vh;
+}
+#about {
+    padding-top: 50px;
+    margin-top: 10px;
+    padding-top:100px;
+}
+#product {
+    padding-top: 50px;
+    margin-top:10px;
+    padding-top:100px;
+}
+#activity{
+  padding-top: 50px;
+  margin-top:10px;
+  padding-top:100px;
+}
+#contact {
+  padding-top: 50px;
+  margin-top:10px;
+  padding-top:100px;
+}
+}
+  </style>
+
+  <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <script>
+  function show_top(){
+    $("#top").show();
+    $("#about").hide();
+    $("#activity").hide();
+    $("#product").hide();
+    $("#contact").hide();
+  }
+  function show_about(){
+    $("#top").hide();
+    $("#about").show();
+    $("#activity").hide();
+    $("#product").hide();
+    $("#contact").hide();
+  }
+  function show_activity(){
+    $("#top").hide();
+    $("#about").hide();
+    $("#activity").show();
+    $("#product").hide();
+    $("#contact").hide();
+  }
+  function show_product(){
+    $("#top").hide();
+    $("#about").hide();
+    $("#activity").hide();
+    $("#product").show();
+    $("#contact").hide();
+  }
+  function show_contact(){
+    $("#top").hide();
+    $("#about").hide();
+    $("#activity").hide();
+    $("#product").hide();
+    $("#contact").show();
+  }
+  </script>
+</head>
+<body>
+
+<header >
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="#" onclick="con(0)" class="navbar-brand">mizunomi32</a>
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse" id="navbar-main">
+        <ul class="nav navbar-nav">
+          <li><a href="#" onclick="show_top();">Top</a></li>
+          <li><a href="#about" onclick="show_about();">About</a></li>
+          <li><a href="#product" onclick="show_product();">Product</a></li>
+          <li><a href="#activity" onclick="show_activity();">Activity log</a></li>
+          <li><a href="#contact" onclick="show_contact();">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<div class="container-fluid" id="top">
+	<div class="row">
+		<div class="col-xs-12 cover-img" style="background-image:url('../image/top.jpg');">
+			<div class="cover-text text-center">
+				<h1><p style="color: #fff;">Mizunomi32</p></h1>
+        <p  style="color: #fff;" class="lead">Welcome my page!</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container" >
+<div class="bs-docs-section clearfix mysection" id="about">
+  <div class="row" >
+    <div class="col-lg-12">
+      <div class="page-header">
+        <h1 >About</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4">image is coming soon</div>
+    <div class="col-sm-6">
+      <ul>
+        <li>Name</li>
+        mizunomi32
+        <li>Age</li>
+        21
+        <li>Job</li>
+        student
+        <li>Language</li>
+        Japanese English HTML CSS PHP JavaScript C C++ C# Java Ruby Python Perl Lisp Go Haskell
+        <li>Skill</li>
+        Unity Opencv Blender Ardiuno Android...etc
+        <li>Like</li>
+        Arch linux  Emacs Python i3-wm zsh ...etc
+      </ul>
+    </div>
+
+  <div class="col-sm-1"></div>
+</div>
+</div>
+<script>
+        $("#about").fadeIn(10000);
+</script>
+
+<div class="bs-docs-section clearfix mysection" id="product">
+  <div class="row" >
+    <div class="col-lg-12">
+      <div class="page-header">
+        <h1 >Product</h1>
+      </div>
+    </div>
+  </div>
+  <ul>
+    <li>Android Apps</li>
+    <li>VR</li>
+    <ul>
+        <li><a href="http://ivrc.net/2016/visitors/#AjaxActionArea">THE MIRROR　～鏡に映るもう一人の自分～</a></li>
+    </ul>
+  </ul>
+
+</div>
+<div class="bs-docs-section clearfix mysection" id="activity">
+  <div class="row" >
+    <div class="col-lg-12">
+      <div class="page-header">
+        <h1 >Activity</h1>
+      </div>
+    </div>
+  </div>
+    <ul>
+      <li>
+        LINE BOT AWARDS Final Stage (ボランティアスタッフ)
+      </li>
+      <li>
+        セキュリティ・キャンプアワード２０１７（スタッフ）
+      </li>
+      <li>
+        LINE BOT AWARDS 公式ハッカソン@大阪<br>
+        優秀作品賞
+      </li>
+      <li>
+        IVRC2016(第24回 国際学生対抗バーチャルリアリティコンテスト) <br>
+        ユース部門銅賞<br>
+          チーム名: Merror<br>
+          作品名: 	THE MIRROR　～鏡に映るもう一人の自分～<br>
+          <a href="http://ivrc.net/2016/">http://ivrc.net/2016/</a>
+      </li>
+      <li>
+        セキュリティキャンプ九州in福岡 2016 (チューター)<br>
+        <a href="http://www.security-camp.org/minicamp/kyushu2016.html">http://www.security-camp.org/minicamp/kyushu2016.html</a>
+      </li>
+      <li>
+        セキュリティキャンプ九州in福岡 2015 <br>
+        <a href="http://www.security-camp.org/minicamp/kyushu2015.html">http://www.security-camp.org/minicamp/kyushu2015.html</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="bs-docs-section clearfix mysection" id="contact">
+    <div class="row" >
+      <div class="col-lg-12">
+        <div class="page-header">
+          <h1 >Contact</h1>
+        </div>
+      </div>
+    </div>
+    <ul>
+      <li><a href="https://github.com/mizunomi32">Github</a></li>
+      <li><a href="https://twitter.com/mizunomi32"> Twitter</a></li>
+      <li><a href="https://blog.miccchi.com">Blog</a></li>
+    </ul>
+
+
+  </div>
+
+
+</div>
+</div>
+<footer style="background-color:gray">Copyright (C) 2017 mizunomi</footer>
+
+<script src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+  $('.bs-component [data-toggle="popover"]').popover();
+  $('.bs-component [data-toggle="tooltip"]').tooltip();
+
+</script>
+<script>
+$("#about").hide();
+$("#activity").hide();
+$("#product").hide();
+$("#contact").hide();
+</script>
+</body>
+</html>
